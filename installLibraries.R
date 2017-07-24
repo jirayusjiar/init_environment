@@ -26,7 +26,7 @@ installedPackages <- installed.packages()[, "Package"]
 new.packages <-
     list.of.packages[!(list.of.packages %in% installedPackages)]
 if (length(new.packages))
-    install.packages(new.packages, repos = "http://cran.rstudio.com/")
+    install.packages(new.packages, repos = "http://cran.rstudio.com/", dependencies=TRUE)
 if (!('DefectData' %in% installedPackages))
     # if DefectData is not loaded
     devtools::install_github("klainfo/DefectData")
