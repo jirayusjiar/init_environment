@@ -30,3 +30,7 @@ if (length(new.packages))
 if (!('DefectData' %in% installedPackages))
     # if DefectData is not loaded
     devtools::install_github("klainfo/DefectData")
+devtools::install_github("jirayusjiar/Jmisc")
+devtools::install_github("software-analytics/Rnalytica")
+
+update.packages(ask = FALSE, dependencies = c('Suggests'))
